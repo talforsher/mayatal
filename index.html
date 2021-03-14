@@ -163,6 +163,15 @@
                     style.innerHTML = res;
                 })
         }
+        arr = ["mayatal (1).png", "empty (1).png", "wedding (1).png", "empty (1).png"]
+        setInterval(
+
+            function(){
+                document.getElementsByTagName("link")[0].href = arr[i%4]
+                i++
+            }, 700
+
+        )
     </script>
 
 
