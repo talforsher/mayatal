@@ -190,7 +190,7 @@ function save() {
     <meta name="description" content="Maya and Tal are getting married. come celebrate with us!">
     <meta name="keywords" content="Maya & Tal wedding">
     <meta name="robots" content="index, follow">
-    <link rel="icon" href="mayatal.png">
+    <link rel="icon" href="mayatal (1).png">
     <title>מאיה וטל | החינה</title>
     <style>
         body {
