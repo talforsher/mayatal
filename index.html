@@ -163,14 +163,14 @@
                     style.innerHTML = res;
                 })
         }
-        arr = ["mayatal (1).png", "empty (1).png", "wedding (1).png", "empty (1).png"]
+        arr = ["1.png", "2.png"]
         var i = 0
         setInterval(
 
             function(){
-                document.getElementsByTagName("link")[0].href = arr[i%4]
+                document.getElementsByTagName("link")[0].href = arr[i%2]
                 i++
-            }, 700
+            }, 1000
 
         )
     </script>
