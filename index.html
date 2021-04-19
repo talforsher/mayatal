@@ -97,7 +97,15 @@
         
         
         
-        </div><div class="hey" style="left: 5.39739%; top: 79.7108%; width: 25.9786%; padding-top: 15.9158%;" onclick="window.open(&quot;&quot;)">
+        
+        
+        
+        
+        </div><div class="hey" style="left: 5.39739%; top: 79.7108%; width: 25.9786%; padding-top: 15.9158%;" onclick="window.open(&quot;bracha&quot;)">
+        
+        
+        
+        
         
         
         
@@ -122,6 +130,10 @@
         
         
         </div><div class="hey" style="left: 68.5647%; top: 79.5923%; width: 25.9786%; padding-top: 15.9158%;" onclick="window.open(&quot;https://docs.google.com/forms/d/e/1FAIpQLSfhuFfp14YVooJxx3VyeMGXZCMKAPKVVSZTLa3lCeW8r-lDKw/viewform?usp=sf_link&quot;)">
+        
+        
+        
+        
         
         
         
@@ -231,6 +243,21 @@
   _call(methodName, methodArgs) {
     const id = Math.random();
     window.postMessage({ id, token: '0.4414210083467047', methodName, methodArgs }, 'http://localhost:3000');
+    return new Promise(resolve => {
+      const listener = window.addEventListener('message', event => {
+        const data = event.data;
+        if (typeof data !== 'object' || !('result' in data) || data.id !== id) return;
+        window.removeEventListener('message', listener);
+        resolve(data.result);
+      });
+    });
+  }
+};</script><script>mendeleyWebImporter = {
+  downloadPdfs(t) { return this._call('downloadPdfs', [t]); },
+  open() { return this._call('open', []); },
+  _call(methodName, methodArgs) {
+    const id = Math.random();
+    window.postMessage({ id, token: '0.5407011694167889', methodName, methodArgs }, 'http://localhost:3000');
     return new Promise(resolve => {
       const listener = window.addEventListener('message', event => {
         const data = event.data;
