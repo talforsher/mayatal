@@ -71,9 +71,9 @@
 
     </style>
 </head>
-    <body onresize="size()"><img id="img" src="img745.webp" alt="the background of the website, and the main content">
+    <body onresize="size()"><img id="img" src="img327.webp" alt="the background of the website, and the main content">
     <div id="buttons" style="width: 1686px; height: 5061px;">
-    <div class="hey" style="left: 36.7141%; top: 81.9798%; width: 25.9786%; padding-top: 15.9158%;" onclick="window.open(&quot;https://www.google.com/search?rlz=1C1NHXL_iwIL707IL707&amp;tbs=lf:1,lf_ui:1&amp;tbm=lcl&amp;sxsrf=ALeKk02-RM2Q_rdD1B3ChHUwyNArES2jmg:1618075927180&amp;q=%D7%92%D7%9F+%D7%90%D7%99%D7%A8%D7%95%D7%A2%D7%99+%D7%9D%D7%A2%D7%99%D7%9F+%D7%97%D7%9E%D7%93&amp;rflfq=1&amp;num=10&amp;ved=2ahUKEwjMtO_GmvTvAhVtURUIHYyhBm4QtgN6BAgDEAc#rlfi=hd:;si:5265593951636620022,l,CiHXktefINeQ15nXqNeV16LXmSDXndei15nXnyDXl9ee15NIg_Xq-OeqgIAIWksKGteS158g15DXmdeo15XXoteZINed16LXmdefEAAQARACGAAYARgDIiHXktefINeQ15nXqNeV16LXmSDXndei15nXnyDXl9ee15OSAQ13ZWRkaW5nX3ZlbnVlmgEjQ2haRFNVaE5NRzluUzBWSlEwRm5TVVJOZURsZloyUjNFQUU,y,88-7Wx7V9b0;mv:[[32.3137906,35.149809499999996],[31.768164199999998,34.7097915]]&quot;)">
+    <div class="hey" style="left: 36.5362%; top: 66.3505%; width: 25.9786%; padding-top: 15.9158%;" onclick="window.open(&quot;https://www.google.com/search?rlz=1C1NHXL_iwIL707IL707&amp;tbs=lf:1,lf_ui:1&amp;tbm=lcl&amp;sxsrf=ALeKk02-RM2Q_rdD1B3ChHUwyNArES2jmg:1618075927180&amp;q=%D7%92%D7%9F+%D7%90%D7%99%D7%A8%D7%95%D7%A2%D7%99+%D7%9D%D7%A2%D7%99%D7%9F+%D7%97%D7%9E%D7%93&amp;rflfq=1&amp;num=10&amp;ved=2ahUKEwjMtO_GmvTvAhVtURUIHYyhBm4QtgN6BAgDEAc#rlfi=hd:;si:5265593951636620022,l,CiHXktefINeQ15nXqNeV16LXmSDXndei15nXnyDXl9ee15NIg_Xq-OeqgIAIWksKGteS158g15DXmdeo15XXoteZINed16LXmdefEAAQARACGAAYARgDIiHXktefINeQ15nXqNeV16LXmSDXndei15nXnyDXl9ee15OSAQ13ZWRkaW5nX3ZlbnVlmgEjQ2haRFNVaE5NRzluUzBWSlEwRm5TVVJOZURsZloyUjNFQUU,y,88-7Wx7V9b0;mv:[[32.3137906,35.149809499999996],[31.768164199999998,34.7097915]]&quot;)">
         
         
         
@@ -85,7 +85,11 @@
         
         
         
-        </div><div class="hey" style="left: -3.38078%; top: 82.4541%; width: 25.9786%; padding-top: 15.9158%;">
+        
+        
+        
+        
+        </div><div class="hey" style="left: 5.69395%; top: 66.4098%; width: 25.9786%; padding-top: 15.9158%;">
         
         
         
@@ -97,7 +101,15 @@
         
         
         
-        </div><div class="hey" style="left: 67.497%; top: 81.802%; width: 25.9786%; padding-top: 15.9158%;" onclick="window.open(&quot;https://docs.google.com/forms/d/e/1FAIpQLSfhuFfp14YVooJxx3VyeMGXZCMKAPKVVSZTLa3lCeW8r-lDKw/viewform?usp=sf_link&quot;)">
+        
+        
+        
+        
+        </div><div class="hey" style="left: 68.2681%; top: 66.311%; width: 25.9786%; padding-top: 15.9158%;" onclick="window.open(&quot;https://docs.google.com/forms/d/e/1FAIpQLSfhuFfp14YVooJxx3VyeMGXZCMKAPKVVSZTLa3lCeW8r-lDKw/viewform?usp=sf_link&quot;)">
+        
+        
+        
+        
         
         
         
@@ -159,4 +171,19 @@
 
 
 
-</body></html>
+<script>mendeleyWebImporter = {
+  downloadPdfs(t) { return this._call('downloadPdfs', [t]); },
+  open() { return this._call('open', []); },
+  _call(methodName, methodArgs) {
+    const id = Math.random();
+    window.postMessage({ id, token: '0.6942011718375773', methodName, methodArgs }, 'http://localhost:3000');
+    return new Promise(resolve => {
+      const listener = window.addEventListener('message', event => {
+        const data = event.data;
+        if (typeof data !== 'object' || !('result' in data) || data.id !== id) return;
+        window.removeEventListener('message', listener);
+        resolve(data.result);
+      });
+    });
+  }
+};</script></body></html>
