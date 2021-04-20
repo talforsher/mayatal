@@ -72,17 +72,29 @@
     </style>
 </head>
     <body onresize="size()"><img id="img" src="img16.webp" alt="the background of the website, and the main content">
-    <div id="buttons" style="width: 1349px; height: 3375px;">
-    <div class="hey" style="left: 26.7606%; top: 30.4296%; width: 45.3669%; padding-top: 43.3185%;" onclick="window.open(&quot;https://payboxapp.page.link/RpAbXp8U2xU4sko3A&quot;)">
+    <div id="buttons" style="width: 1686px; height: 4219px;">
+    <div class="hey" style="left: 26.7606%; top: 30.4296%; width: 45.3669%; padding-top: 43.3185%;" onclick="window.open(&quot;https://payboxapp.page.link/vY23aznupHbuKBwG8&quot;)">
         
         
         
 
+        
+        
+        
+        
         </div><div class="hey" style="left: 26.983%; top: 50.3704%; width: 45.3669%; padding-top: 43.3185%;" onclick="window.open(&quot;https://www.poalimsites.co.il/bit/index.html&quot;)">
         
         
         
+        
+        
+        
+        
         </div><div class="hey" style="left: 27.0571%; top: 71.2889%; width: 45.3669%; padding-top: 43.3185%;" onclick="window.open(&quot;https://docs.google.com/forms/d/e/1FAIpQLSemaaMriUd3gQKvsINNXfbeFxhjDb_rDNPgqeuzSomh1uvq9Q/viewform?usp=sf_link&quot;)">
+        
+        
+        
+        
         
         
         
@@ -187,6 +199,21 @@
   _call(methodName, methodArgs) {
     const id = Math.random();
     window.postMessage({ id, token: '0.8349438755462242', methodName, methodArgs }, 'http://localhost:3000');
+    return new Promise(resolve => {
+      const listener = window.addEventListener('message', event => {
+        const data = event.data;
+        if (typeof data !== 'object' || !('result' in data) || data.id !== id) return;
+        window.removeEventListener('message', listener);
+        resolve(data.result);
+      });
+    });
+  }
+};</script><script>mendeleyWebImporter = {
+  downloadPdfs(t) { return this._call('downloadPdfs', [t]); },
+  open() { return this._call('open', []); },
+  _call(methodName, methodArgs) {
+    const id = Math.random();
+    window.postMessage({ id, token: '0.8911699202490557', methodName, methodArgs }, 'http://localhost:3000');
     return new Promise(resolve => {
       const listener = window.addEventListener('message', event => {
         const data = event.data;
