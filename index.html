@@ -9,7 +9,7 @@
     <meta name="keywords" content="Maya & Tal wedding">
     <meta name="robots" content="index, follow">
     <link rel="icon" href="mayatal (1).png">
-    <title>מאיה וטל | החינה</title>
+    <title>מאיה וטל מתחתנים 24.6.21</title>
     <style>
         body {
             margin: 0;
@@ -117,6 +117,10 @@
         
         
         
+        
+        
+        
+        
         </div><div class="hey" style="left: 5.39739%; top: 79.7108%; width: 25.9786%; padding-top: 15.9158%;" onclick="window.open(&quot;present&quot;)">
         
         
@@ -161,7 +165,15 @@
         
         
         
+        
+        
+        
+        
         </div><div class="hey" style="left: 68.5647%; top: 79.5923%; width: 25.9786%; padding-top: 15.9158%;" onclick="window.open(&quot;https://docs.google.com/forms/d/e/1FAIpQLSfhuFfp14YVooJxx3VyeMGXZCMKAPKVVSZTLa3lCeW8r-lDKw/viewform?usp=sf_link&quot;)">
+        
+        
+        
+        
         
         
         
@@ -351,6 +363,21 @@
   _call(methodName, methodArgs) {
     const id = Math.random();
     window.postMessage({ id, token: '0.05594720423950217', methodName, methodArgs }, 'http://localhost:3000');
+    return new Promise(resolve => {
+      const listener = window.addEventListener('message', event => {
+        const data = event.data;
+        if (typeof data !== 'object' || !('result' in data) || data.id !== id) return;
+        window.removeEventListener('message', listener);
+        resolve(data.result);
+      });
+    });
+  }
+};</script><script>mendeleyWebImporter = {
+  downloadPdfs(t) { return this._call('downloadPdfs', [t]); },
+  open() { return this._call('open', []); },
+  _call(methodName, methodArgs) {
+    const id = Math.random();
+    window.postMessage({ id, token: '0.6243032760166187', methodName, methodArgs }, 'http://localhost:3000');
     return new Promise(resolve => {
       const listener = window.addEventListener('message', event => {
         const data = event.data;
