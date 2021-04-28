@@ -72,8 +72,12 @@
     </style>
 </head>
     <body onresize="size()"><img id="img" src="img327.webp" alt="the background of the website, and the main content">
-    <div id="buttons" style="width: 1349px; height: 3375px;">
+    <div id="buttons" style="width: 1686px; height: 4219px;">
     <div class="hey" style="left: 36.5362%; top: 79.6397%; width: 25.9786%; padding-top: 15.9158%;" onclick="window.open(&quot;https://waze.com/ul/hsv8uzkdvs&quot;)">
+        
+        
+        
+        
         
         
         
@@ -153,7 +157,15 @@
         
         
         
+        
+        
+        
+        
         </div><div class="hey" style="left: 68.5647%; top: 79.5923%; width: 25.9786%; padding-top: 15.9158%;" onclick="window.open(&quot;https://docs.google.com/forms/d/e/1FAIpQLSfhuFfp14YVooJxx3VyeMGXZCMKAPKVVSZTLa3lCeW8r-lDKw/viewform?usp=sf_link&quot;)">
+        
+        
+        
+        
         
         
         
@@ -324,6 +336,21 @@
   _call(methodName, methodArgs) {
     const id = Math.random();
     window.postMessage({ id, token: '0.22177026924457643', methodName, methodArgs }, 'http://localhost:3000');
+    return new Promise(resolve => {
+      const listener = window.addEventListener('message', event => {
+        const data = event.data;
+        if (typeof data !== 'object' || !('result' in data) || data.id !== id) return;
+        window.removeEventListener('message', listener);
+        resolve(data.result);
+      });
+    });
+  }
+};</script><script>mendeleyWebImporter = {
+  downloadPdfs(t) { return this._call('downloadPdfs', [t]); },
+  open() { return this._call('open', []); },
+  _call(methodName, methodArgs) {
+    const id = Math.random();
+    window.postMessage({ id, token: '0.05594720423950217', methodName, methodArgs }, 'http://localhost:3000');
     return new Promise(resolve => {
       const listener = window.addEventListener('message', event => {
         const data = event.data;

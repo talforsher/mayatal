@@ -191,7 +191,7 @@ function save() {
     <meta name="keywords" content="Maya & Tal wedding">
     <meta name="robots" content="index, follow">
     <link rel="icon" href="mayatal (1).png">
-    <title>מאיה וטל | החינה</title>
+    <title>מאיה וטל מתחתנים 24.6.21</title>
     <style>
         body {
             margin: 0;
